@@ -30,6 +30,7 @@ public class SqliteActivity extends AppCompatActivity {
         values.put("author","Dan Brown");
         values.put("pages",454);
         values.put("price",16.95);
+        //添加到数据库
         db.insert("Book",null,values);
 
         Toast.makeText(this, "插入数据成功！", Toast.LENGTH_SHORT).show();
