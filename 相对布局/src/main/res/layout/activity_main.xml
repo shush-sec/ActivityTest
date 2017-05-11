@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.relative.MainActivity"
+    >
+
+    <Button
+        android:layout_margin="5dp"
+        android:id="@+id/btnCenter"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="中间按钮"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上边按钮"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/btnCenter"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="左边按钮"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/btnCenter"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="右边按钮"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/btnCenter"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下边按钮"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnCenter"
+        />
+</RelativeLayout>

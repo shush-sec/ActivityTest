@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/activityTest" />
+            <option value="$PROJECT_DIR$/broadcasttest" />
+            <option value="$PROJECT_DIR$/listview" />
+            <option value="$PROJECT_DIR$/uicustomviews" />
+            <option value="$PROJECT_DIR$/打电话" />
+            <option value="$PROJECT_DIR$/数据存储" />
+            <option value="$PROJECT_DIR$/相对布局" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

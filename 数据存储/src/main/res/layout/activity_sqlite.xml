@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context="com.example.savedata.SqliteActivity">
+
+    <Button
+        android:id="@+id/btn_createDB"
+        android:onClick="onClickCreateDB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="创建数据库"
+        />
+    <Button
+        android:id="@+id/btn_updateDB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="更新数据库"
+        />
+    <Button
+        android:id="@+id/btn_insertData"
+        android:onClick="onClickInsertData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="插入数据"
+        />
+    <Button
+        android:id="@+id/btn_updateData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="更新数据"
+        />
+    <Button
+        android:id="@+id/btn_selectData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查询数据"
+        />
+    <Button
+        android:id="@+id/btn_delData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除数据"
+        />
+
+
+</LinearLayout>
