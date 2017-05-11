@@ -1,8 +1,12 @@
 package com.example.callPhone;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
 import android.view.View;
@@ -22,7 +26,15 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                testCallPhone();
+                if (ContextCompat.checkSelfPermission(MainActivity.this,
+                        Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(MainActivity.this,
+                            new String[]{Manifest.permission.CALL_PHONE}, 1);
+                } else {
+
+                    testCallPhone();
+                }
+
             }
         });
 
@@ -35,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void testSendSMS(){
+    public void testSendSMS() {
         EditText editText = (EditText) findViewById(R.id.tv_num);
         String num = editText.getText().toString();
 
@@ -47,15 +59,17 @@ public class MainActivity extends AppCompatActivity {
         //拆分短信
         ArrayList<String> parts = smsManager.divideMessage(content);
         //发送短信
-        smsManager.sendMultipartTextMessage(num,null,parts,null,null);
+        smsManager.sendMultipartTextMessage(num, null, parts, null, null);
     }
-    public void testCallPhone(){
+
+    //打电话
+    public void testCallPhone() {
         EditText editText = (EditText) findViewById(R.id.tv_num);
         String num = editText.getText().toString();
 
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_CALL);
-        intent.setData(Uri.parse("tel:"+num));
+        intent.setData(Uri.parse("tel:" + num));
         startActivity(intent);
     }
 }
