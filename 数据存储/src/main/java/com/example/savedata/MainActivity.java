@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
             //1.获取需要的数据
             String user = etUserName.getText().toString();
             String pass = etUserPwd.getText().toString();
-
             //2.创建文件对象
             String fileName = getFilesDir() + "/info.txt";
             File file = new File(fileName);
