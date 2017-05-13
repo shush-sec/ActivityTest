@@ -7,7 +7,9 @@
       <module fileurl="file://$PROJECT_DIR$/broadcasttest/broadcasttest.iml" filepath="$PROJECT_DIR$/broadcasttest/broadcasttest.iml" />
       <module fileurl="file://$PROJECT_DIR$/contactstest/contactstest.iml" filepath="$PROJECT_DIR$/contactstest/contactstest.iml" />
       <module fileurl="file://$PROJECT_DIR$/listview/listview.iml" filepath="$PROJECT_DIR$/listview/listview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/listviewtest/listviewtest.iml" filepath="$PROJECT_DIR$/listviewtest/listviewtest.iml" />
       <module fileurl="file://$PROJECT_DIR$/uicustomviews/uicustomviews.iml" filepath="$PROJECT_DIR$/uicustomviews/uicustomviews.iml" />
+      <module fileurl="file://$PROJECT_DIR$/商品金额/商品金额.iml" filepath="$PROJECT_DIR$/商品金额/商品金额.iml" />
       <module fileurl="file://$PROJECT_DIR$/打电话/打电话.iml" filepath="$PROJECT_DIR$/打电话/打电话.iml" />
       <module fileurl="file://$PROJECT_DIR$/数据存储/数据存储.iml" filepath="$PROJECT_DIR$/数据存储/数据存储.iml" />
       <module fileurl="file://$PROJECT_DIR$/相对布局/相对布局.iml" filepath="$PROJECT_DIR$/相对布局/相对布局.iml" />

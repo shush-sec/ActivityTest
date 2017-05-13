@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //从SDcard读取数据
     private void loatFromSD(){
         EditText etUserName = (EditText) findViewById(R.id.etUserName);
         EditText etUserPwd = (EditText) findViewById(R.id.etUserPwd);

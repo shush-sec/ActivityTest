@@ -17,6 +17,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         mContext = context;
     }
 
+    //一般创建数据库表
     @Override
     public void onCreate(SQLiteDatabase db) {
         String CREATE_BOOK = "create table Book(" +
