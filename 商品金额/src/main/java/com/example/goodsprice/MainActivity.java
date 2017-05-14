@@ -3,7 +3,6 @@ package com.example.goodsprice;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -23,13 +22,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         listView = (ListView) findViewById(R.id.accountLV);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                refreshUI();
-
-            }
-        });
 
         //初始化商品列表
         getGoodsList();
@@ -61,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
         String goodsName = editText.getText().toString();
         String price = editText1.getText().toString();
 
+        if (goodsName.equals("")||price.equals("")){
+            return ;
+        }
         Map<String, String> map = new HashMap<>();
         map.put("name", goodsName);
         map.put("price", price);

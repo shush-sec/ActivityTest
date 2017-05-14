@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 /**
  * Created by shush on 2017/5/13.
  */
@@ -70,7 +71,8 @@ public class DBHelper extends SQLiteOpenHelper {
         db = getWritableDatabase();
         //创建游标对象
         Cursor cursor = db.query("prices", new String[]
-                {"id", "name", "price"}, null, null, null, null, null);
+                {"id", "name", "price"}, null, null, null, null, "id");
+
         if (cursor.getCount() == 0){
             return listGoods;
         }
@@ -88,6 +90,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
             listGoods.add(map);
         } while (cursor.moveToNext());
+        cursor.close();
+
 
         return listGoods;
     }

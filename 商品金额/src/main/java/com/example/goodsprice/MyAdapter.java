@@ -20,6 +20,7 @@ import java.util.Map;
 public class MyAdapter extends ArrayAdapter<Map<String,String>> {
 
     private int resourceId;
+    MainActivity mainActivity = (MainActivity) getContext();
     private DBHelper dbHelper = new DBHelper(getContext(), "Goods", null, 1);;
     public MyAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<Map<String, String>> objects) {
         super(context, resource, objects);
@@ -50,6 +51,8 @@ public class MyAdapter extends ArrayAdapter<Map<String,String>> {
                 @Override
                 public void onClick(View v) {
                     dbHelper.delGoods(idTV.getText().toString());
+                    mainActivity.refreshUI();
+
                 }
             });
             //4.2增加金额监听事件
@@ -59,7 +62,7 @@ public class MyAdapter extends ArrayAdapter<Map<String,String>> {
                 public void onClick(View v) {
                     int price = Integer.valueOf( balanceTV.getText().toString())+1;
                     dbHelper.upGoods(idTV.getText().toString(),price);
-
+                    mainActivity.refreshUI();
                 }
             });
             //4.3减少金额监听事件
@@ -69,6 +72,7 @@ public class MyAdapter extends ArrayAdapter<Map<String,String>> {
                 public void onClick(View v) {
                     int price = Integer.valueOf( balanceTV.getText().toString())-1;
                     dbHelper.upGoods(idTV.getText().toString(),price);
+                    mainActivity.refreshUI();
                 }
             });
         }
