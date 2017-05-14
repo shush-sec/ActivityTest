@@ -54,7 +54,6 @@
 
     <ImageView
         android:id="@+id/deleteIV"
-        android:onClick="onDelClick"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:src="@android:drawable/ic_menu_delete" />
