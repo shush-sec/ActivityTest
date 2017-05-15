@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
     public void testSendSMS() {
         EditText editText = (EditText) findViewById(R.id.tv_num);
         String num = editText.getText().toString();
-
         EditText et = (EditText) findViewById(R.id.tv_content);
         String content = et.getText().toString();
 
