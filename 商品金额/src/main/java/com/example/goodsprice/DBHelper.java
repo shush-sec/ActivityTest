@@ -91,8 +91,6 @@ public class DBHelper extends SQLiteOpenHelper {
             listGoods.add(map);
         } while (cursor.moveToNext());
         cursor.close();
-
-
         return listGoods;
     }
 }
