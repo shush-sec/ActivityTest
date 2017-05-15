@@ -27,4 +27,5 @@ public class SecondActivity extends AppCompatActivity {
         Button button_2 = (Button) findViewById(R.id.button_2);
         onClick(button_2);
     }
+    
 }
