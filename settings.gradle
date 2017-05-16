@@ -1,1 +1,1 @@
-include ':activityTest', ':打电话', ':相对布局', ':listview', ':数据存储', ':uicustomviews', ':broadcasttest', ':contactstest', ':listviewtest', ':商品金额'
+include ':activityTest', ':打电话', ':相对布局', ':listview', ':数据存储', ':uicustomviews', ':broadcasttest', ':contactstest', ':listviewtest', ':商品金额', ':broadcastbestpractice'

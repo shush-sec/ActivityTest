@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         //获取sms管理器
         SmsManager smsManager = SmsManager.getDefault();
+
         //拆分短信
         ArrayList<String> parts = smsManager.divideMessage(content);
         //发送短信
