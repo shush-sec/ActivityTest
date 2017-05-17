@@ -46,6 +46,8 @@ public class  MainActivity extends AppCompatActivity {
             }else{
                 Toast.makeText(context, "network is unavailable", Toast.LENGTH_SHORT).show();
             }
+
+
         }
     }
 }
