@@ -12,5 +12,9 @@ public class BootCompleteReceiver extends BroadcastReceiver {
         // TODO: This method is called when the BroadcastReceiver is receiving
         // an Intent broadcast.
         Toast.makeText(context, "Boot Complete", Toast.LENGTH_LONG).show();
+
+        Intent intent1 = new Intent(context,MainActivity.class);
+        intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent1);
     }
 }
