@@ -26,10 +26,11 @@ public class BootStartUtils {
     }
 
     public List<Map<String, Object>> fetchInstalledApps() {
-        PackageManager pm = mContext.getPackageManager();
+            PackageManager pm = mContext.getPackageManager();
         List<ApplicationInfo> appInfo = pm.getInstalledApplications(0);
         Iterator<ApplicationInfo> appInfoIterator = appInfo.iterator();
         List<Map<String, Object>> appList = new ArrayList<>(appInfo.size());
+
 
         while (appInfoIterator.hasNext()) {
             ApplicationInfo app = appInfoIterator.next();
