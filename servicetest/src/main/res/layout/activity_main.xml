@@ -20,4 +20,25 @@
         android:layout_height="wrap_content"
         android:text="停止服务"
         />
+
+    <Button
+        android:id="@+id/btn_bind_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="绑定服务"
+        />
+
+    <Button
+        android:id="@+id/btn_unbind_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="解绑服务"
+        />
+
+    <Button
+        android:id="@+id/btn_start_intentservice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开启Intent服务"
+        />
 </LinearLayout>
