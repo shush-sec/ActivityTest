@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //通过getContentResolver()获取一个ContentResolver
+        //并使用query（）获取联系人的游标
         Cursor cursor = getContentResolver()
                 .query(ContactsContract.Contacts.CONTENT_URI, null, null, null, null, null);
 
@@ -44,14 +46,14 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-
+        //使用ArraryAdapter填充ListView
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this
                 , android.R.layout.simple_list_item_1
                 , contactList);
 
         ListView listView = (ListView) findViewById(R.id.contacts_view);
         listView.setAdapter(adapter);
-             //监听listView点击事件
+        //监听listView点击事件
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
