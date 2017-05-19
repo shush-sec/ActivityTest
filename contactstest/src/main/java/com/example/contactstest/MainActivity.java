@@ -19,9 +19,10 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     List<String> contactList = new ArrayList<>();
-    Map<String,String> contactMap = new HashMap<>() ;  //这个map用于传递contactId到DetailActivity
+    Map<String, String> contactMap = new HashMap<>();  //这个map用于传递contactId到DetailActivity
     String contactName = null;
     String contactId = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
                 contactName = cursor
                         .getString(cursor.getColumnIndex
                                 (ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
-               contactId= cursor
+                contactId = cursor
                         .getString(cursor.getColumnIndex
                                 (ContactsContract.Contacts._ID));
                 contactList.add(contactName);
-                contactMap.put(contactName,contactId);
+                contactMap.put(contactName, contactId);
             }
         }
 
@@ -57,9 +58,10 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(MainActivity.this,DetailActvity.class);
-                String contactID =  contactMap.get( contactList.get(position))  ;
+                Intent intent = new Intent(MainActivity.this, DetailActvity.class);
+                String contactID = contactMap.get(contactList.get(position));
                 intent.putExtra("id", contactID);
+                intent.putExtra("name", contactList.get(position));
                 startActivity(intent);
             }
         });

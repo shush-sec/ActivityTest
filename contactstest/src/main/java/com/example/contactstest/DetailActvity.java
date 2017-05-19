@@ -7,6 +7,7 @@ import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +23,9 @@ public class DetailActvity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
+        String name = intent.getStringExtra("name");
+        TextView textView = (TextView) findViewById(R.id.name);
+        textView.setText(name);
 
         //获取某联系人电话号码列表
         String number ;
