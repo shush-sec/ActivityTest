@@ -9,12 +9,15 @@
       <module fileurl="file://$PROJECT_DIR$/contactstest/contactstest.iml" filepath="$PROJECT_DIR$/contactstest/contactstest.iml" />
       <module fileurl="file://$PROJECT_DIR$/listview/listview.iml" filepath="$PROJECT_DIR$/listview/listview.iml" />
       <module fileurl="file://$PROJECT_DIR$/listviewtest/listviewtest.iml" filepath="$PROJECT_DIR$/listviewtest/listviewtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servicebestpractice/servicebestpractice.iml" filepath="$PROJECT_DIR$/servicebestpractice/servicebestpractice.iml" />
       <module fileurl="file://$PROJECT_DIR$/servicetest/servicetest.iml" filepath="$PROJECT_DIR$/servicetest/servicetest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sometest/sometest.iml" filepath="$PROJECT_DIR$/sometest/sometest.iml" />
       <module fileurl="file://$PROJECT_DIR$/uicustomviews/uicustomviews.iml" filepath="$PROJECT_DIR$/uicustomviews/uicustomviews.iml" />
       <module fileurl="file://$PROJECT_DIR$/商品金额/商品金额.iml" filepath="$PROJECT_DIR$/商品金额/商品金额.iml" />
       <module fileurl="file://$PROJECT_DIR$/打电话/打电话.iml" filepath="$PROJECT_DIR$/打电话/打电话.iml" />
       <module fileurl="file://$PROJECT_DIR$/数据存储/数据存储.iml" filepath="$PROJECT_DIR$/数据存储/数据存储.iml" />
       <module fileurl="file://$PROJECT_DIR$/相对布局/相对布局.iml" filepath="$PROJECT_DIR$/相对布局/相对布局.iml" />
+      <module fileurl="file://$PROJECT_DIR$/网页图片查看器/网页图片查看器.iml" filepath="$PROJECT_DIR$/网页图片查看器/网页图片查看器.iml" />
     </modules>
   </component>
 </project>
