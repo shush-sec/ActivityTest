@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView
-        android:id="@+id/operators"
+        android:id="@+id/att"
         android:textSize="26dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

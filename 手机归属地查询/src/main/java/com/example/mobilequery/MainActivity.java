@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mPhone;
     private TextView mArea;
     private TextView mCtype;
-    private TextView mOperators;
+    private TextView mAtt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         mPhone = (TextView) findViewById(R.id.phone);
         mArea = (TextView) findViewById(R.id.area);
         mCtype = (TextView) findViewById(R.id.ctype);
-        mOperators = (TextView) findViewById(R.id.operators);
+        mAtt = (TextView) findViewById(R.id.att);
 
     }
 
@@ -43,12 +43,14 @@ public class MainActivity extends AppCompatActivity {
 
         mPath = url+"/?app=phone.get&phone="+phone+"&" +
                 "appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=xml";
+
         new Thread(){
             @Override
             public void run() {
-                super.run();
+
                 try {
                     URL url = new URL(mPath);
+                    System.out.println(mPath);
                     HttpURLConnection urlConn = (HttpURLConnection) url.openConnection();
                     urlConn.setRequestMethod("GET");
                     urlConn.setConnectTimeout(5000);
@@ -63,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                                 mPhone.setText(phoneInfo.phone);
                                 mArea.setText(phoneInfo.area);
                                 mCtype.setText(phoneInfo.ctype);
-                                mOperators.setText(phoneInfo.operators);
+                                mAtt.setText(phoneInfo.att);
                             }
                         });
                     }
@@ -72,17 +74,18 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-        };
+        }.start();
 
     }
     public static PhoneInfo xmlPull(InputStream in){
 
-        phoneInfo = new PhoneInfo();
+
         try {
             XmlPullParserFactory factory= XmlPullParserFactory.newInstance();
             XmlPullParser pullParser = factory.newPullParser();
             pullParser.setInput(in,"utf-8");
             int eventType = pullParser.getEventType();
+            phoneInfo = new PhoneInfo();
             while (eventType!=XmlPullParser.END_DOCUMENT){
                 String nodeName =pullParser.getName();
                 switch (eventType){
@@ -98,16 +101,17 @@ public class MainActivity extends AppCompatActivity {
                         else if("area".equals(nodeName))
                             phoneInfo.setArea(pullParser.nextText());
                         else if("ctype".equals(nodeName))
-                            phoneInfo.setPhone(pullParser.nextText());
-                        else if("operators".equals(nodeName))
-                            phoneInfo.setOperators(pullParser.nextText());
+                            phoneInfo.setCtype(pullParser.nextText());
+                        else if("att".equals(nodeName))
+                            phoneInfo.setAtt(pullParser.nextText());
                         break;
                     case XmlPullParser.END_TAG:
                         System.out.println("END_TAG:"+nodeName);
                         break;
                     default:break;
                 }
-                //eventType = pullParser.next();
+                //!!!!必须手动触发下一个事件
+                eventType = pullParser.next();
             }
 
         } catch (Exception e) {
