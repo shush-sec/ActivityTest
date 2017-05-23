@@ -1,1 +1,1 @@
-include ':activityTest', ':打电话', ':相对布局', ':listview', ':数据存储', ':uicustomviews', ':broadcasttest', ':contactstest', ':listviewtest', ':商品金额', ':broadcastbestpractice', ':servicetest', ':servicebestpractice', ':网页图片查看器', ':asynctask', ':手机归属地查询'
+include ':activityTest', ':打电话', ':相对布局', ':listview', ':数据存储', ':uicustomviews', ':broadcasttest', ':contactstest', ':listviewtest', ':商品金额', ':broadcastbestpractice', ':servicetest', ':servicebestpractice', ':网页图片查看器', ':asynctask', ':手机归属地查询', ':手机号码凶吉查询', ':manifestanalyze'

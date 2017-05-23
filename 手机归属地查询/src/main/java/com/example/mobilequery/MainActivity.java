@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
                     if (code == 200){
                         InputStream in = urlConn.getInputStream();
                         phoneInfo =  xmlPull(in);
+                        //将值显示到界面
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -78,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public static PhoneInfo xmlPull(InputStream in){
-
 
         try {
             XmlPullParserFactory factory= XmlPullParserFactory.newInstance();
