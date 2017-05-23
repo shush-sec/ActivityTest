@@ -5,22 +5,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="com.example.openpicture.MainActivity">
+    android:layout_height="match_parent" tools:context="com.example.asynctask.MainActivity">
 
-    <Button
-        android:id="@+id/btn_open"
-        android:text="打开图片"
-        android:textSize="24dp"
-        android:onClick="openPic"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
+   <Button
+       android:id="@+id/btnOpen"
+       android:text="打开图片"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
     <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="match_parent"
+        android:id="@+id/seekbar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <ImageView
         android:id="@+id/iv_pic"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
 </LinearLayout>
